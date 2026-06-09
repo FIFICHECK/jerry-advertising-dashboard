@@ -7,7 +7,7 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; background: #0f1419; color: #e7e9ea; min-height: 100vh; }
-.header { background: linear(135deg, #1a1f2e 0%, #2d1b4e 100%); padding: 24px 40px; border-bottom: 1px solid #2f3336; }
+.header { background: linear-gradient(135deg, #1a1f2e 0%, #2d1b4e 100%); padding: 24px 40px; border-bottom: 1px solid #2f3336; }
 .header h1 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .header p { font-size: 13px; color: #8b98a5; }
 .header .badge { display: inline-block; background: #e91e63; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px; }
@@ -53,20 +53,20 @@ td.credit.high { color: #ab47bc; }
 
 <div class="header">
   <h1>Jerry MMS Advertising Dashboard <span class="badge">LIVE</span></h1>
-  <p>Store Ad Credit Usage Report &mdash; Last refreshed: 2026/06/10 00:57</p>
+  <p>Store Ad Credit Usage Report &mdash; Last refreshed: 2026/06/10 01:33</p>
 </div>
 
 <div class="stats-row">
   <div class="stat-card">
-    <div class="num blue">199</div>
+    <div class="num blue">175</div>
     <div class="label">Total Stores (2 Pages)</div>
   </div>
   <div class="stat-card">
-    <div class="num red">55</div>
+    <div class="num red">31</div>
     <div class="label">Zero Credit</div>
   </div>
   <div class="stat-card">
-    <div class="num orange">13</div>
+    <div class="num orange">12</div>
     <div class="label">Low (&lt;HK$100)</div>
   </div>
   <div class="stat-card">
@@ -74,7 +74,7 @@ td.credit.high { color: #ab47bc; }
     <div class="label">OK (HK$100-10k)</div>
   </div>
   <div class="stat-card">
-    <div class="num purple">71</div>
+    <div class="num purple">72</div>
     <div class="label">High (≥HK$10k)</div>
   </div>
 </div>
@@ -103,7 +103,7 @@ td.credit.high { color: #ab47bc; }
 
 <div class="table-wrap">
   <div class="top-bar">
-    <span id="showing">Showing 199 rows</span>
+    <span id="showing">Showing 175 rows</span>
     <span style="color:#e91e63;font-weight:600;">★ MMS Store Ad Credit</span>
   </div>
   <table id="dataTable">
@@ -122,209 +122,11 @@ td.credit.high { color: #ab47bc; }
 </div>
 
 <div class="footer">
-  Data source: MMS Shoalter E-Commerce → Advertising Booking → Store List | Pages 1-2 of 1089 | More pages available on request
+  Data source: MMS Shoalter E-Commerce &rarr; Advertising Booking &rarr; Store List | Pages 1-2 of 1089 | More pages available on request
 </div>
 
 <script>
-const data = [["H5258001","Tai Pan Ball","24/01/2022",26],
- ["H5950001","Ocean Three","14/01/2025",1136514],
- ["H6773001","Amofia","02/01/2020",15000],
- ["H6817002","BOATAT FOODS MARKET","23/12/2022",123],
- ["H6980001","SHIKI Wine","03/01/2025",71837],
- ["H6769001","SUM KIU","22/12/2023",10313],
- ["H0228001","Hung Fook Tong","24/01/2022",0],
- ["H0727001","Sugi Bee Garden","24/01/2022",15000],
- ["H0821001","eFoodWorld","24/01/2022",99],
- ["H6823001","Giordano Limited","09/04/2025",840732],
- ["S1123001","HOM","02/01/2020",0],
- ["H0355001","Chow Tai Fook","09/04/2025",1014743],
- ["H5037001","Casablanca","10/10/2024",1167456],
- ["H7140001","BALENO KINGDOM LIMITED","24/01/2022",28125],
- ["H5931001","TITAN","06/01/2023",2343],
- ["H0808001","JDHK Shop","24/01/2022",1173],
- ["H5101001","Truefun","02/01/2020",1326],
- ["H5807003","Hasbro","30/01/2023",94],
- ["H7051001","G2000","20/01/2023",920],
- ["H0389001","3M","09/04/2025",412187],
- ["H1077001","維他奶 / 維他","23/12/2024",1793231],
- ["S1061001","Market Of All Nations","24/01/2022",50000],
- ["H1028001","Mannings","04/10/2024",1052553],
- ["H1061001","Nissin","04/02/2025",256777],
- ["H1010002","Mondelez International","03/01/2025",104540],
- ["H1135001","Quaker","03/01/2025",923],
- ["H0551003","KIMBERLY-CLARK (HONG KONG) LIMITED","08/11/2024",533421],
- ["H1069001","Pampers Hong Kong Official Store","03/01/2025",714068],
- ["H1066002","Tempo Hong Kong Official Store","19/06/2025",956007],
- ["H1131001","Swisse Official Store","09/04/2025",262706],
- ["H1139001","GSK Hong Kong Official Store","06/12/2024",663386],
- ["H1095001","Wyeth Nutrition Official Store","23/11/2024",107792],
- ["S6021001","KINGSWAY BEAUTY","24/01/2022",183],
- ["S6061001","OrganicMaMa Ltd","09/04/2025",36820],
- ["H0623003","Mannings (Phase 2)","24/01/2022",173],
- ["H6588001","GLORIOUS DIGITAL COMPANY LIMITED","24/01/2022",53319],
- ["H5276001","ecHome","24/01/2022",1586],
- ["H0696018","Electrical Appliances Butler","12/01/2024",11218],
- ["H6185002","French Pharma","24/01/2022",1013],
- ["H0595001","Smartech","24/01/2022",0],
- ["H5039001","Brilliant Channel","24/01/2022",20],
- ["H0967001","F & M","09/04/2025",918948],
- ["H6966001","LEGO","06/12/2024",1600000],
- ["H5395001","LingSik King","25/10/2023",20139],
- ["H7115001","YUAN","24/02/2022",25000],
- ["H6689001","莎莎香港旗艦店","08/02/2024",50735],
- ["H0337001","Sasa","24/01/2022",9542],
- ["H6292001","SnacksToHome","29/11/2024",475071],
- ["H1086001","Swipe","23/11/2024",267462],
- ["H1051001","SCJ","18/10/2024",110309],
- ["H6953001","Silver Star International Limited","24/02/2022",146],
- ["H1078001","Wine & Spirit Merchant","29/11/2024",188957],
- ["H1082001","嘉士伯官方旗艦店","29/11/2024",491398],
- ["H7213001","ABC","09/04/2025",18629586],
- ["H0958013","Pretties","24/01/2022",0],
- ["H6527001","all about pet","09/04/2025",1044068],
- ["H6242001","Ocean One","24/01/2022",8376],
- ["H0997002","Herbs","24/01/2022",0],
- ["S1098001","wawahuen","24/01/2022",304],
- ["H0956006","Yummy Bear","19/01/2023",1142],
- ["H5680001","convene","24/02/2022",50000],
- ["H5789001","ROPPONGI","24/01/2022",16],
- ["H6349004","Tefal","24/01/2022",0],
- ["H0873002","Gilman Outlet","23/01/2025",233195],
- ["H6168001","藝匠修鞋｜皮具家居護理專門店","06/01/2023",1442],
- ["H6480001","Yue Fung Department Store","24/01/2022",2587],
- ["H5193001","AQ Bio","24/01/2022",15000],
- ["H5337002","Global Brand 全球直送","24/01/2022",817],
- ["S1203001","家樂 Happy_Home","13/01/2020",10970],
- ["H5535005","FoodWise","02/03/2022",0],
- ["S1056001","陽光生活百貨 Sun Grocery HK Limited","13/01/2020",0],
- ["H5573001","Fine Japan","23/01/2025",99451],
- ["H6780001","Mustela Flagship store","09/04/2025",420627],
- ["H5685001","Global Bio","16/11/2023",374],
- ["H6093001","Meow's Workshop Limited","13/01/2020",29],
- ["H0972006","ASK Gadgets","24/01/2022",245],
- ["H5156001","A3","13/01/2020",0],
- ["H0610011","Homeappliance","24/02/2022",1609],
- ["H5807001","Unstoppable","30/01/2023",21],
- ["H5980001","The One Baby","01/12/2023",5604],
- ["S1076001","Vertex 恆進","24/01/2022",626],
- ["H6709001","Lady Avenue","24/01/2022",1062],
- ["H7056001","EHS Healthcare","13/01/2020",0],
- ["H1128001","Mospro","09/12/2022",102138],
- ["H1099001","Cow & Gate","13/12/2024",300863],
- ["H1022001","Colgate-Palmolive","29/11/2024",3135992],
- ["H1026001","Saving International Flagship Store","09/04/2025",834295],
- ["S1103001","Panda Pig","22/01/2020",0],
- ["H6712001","Royal Cosmetics","24/01/2022",41667],
- ["H5868001","Century Mall Outlet","03/01/2025",275300],
- ["H6184001","OneTwoFit","01/12/2023",13815],
- ["H6777001","Chill Mall","24/01/2022",1566],
- ["H6842001","DOUBLE H DEVELOPMENT LIMITED","04/02/2022",3112],
- ["H6807001","EAST STAR STATIONERY CO. LIMITED","19/04/2022",191],
- ["H6840001","CY ELECTRONIC TECHNOLOGY LIMITED","24/01/2022",25000],
- ["H6917001","Wing Tech Limited","24/01/2022",25000],
- ["H6759001","jpzone","24/01/2022",450],
- ["H7000001","Market Toyosu (HK)","04/02/2022",15000],
- ["H7001001","PACE SUPPLY CHAIN INTERNATIONAL LIMITED","28/02/2022",67],
- ["H7002001","Janus Trading Company Limited","24/01/2022",200],
- ["H7010001","Pacific Rich Resources (Hong Kong) Limited","22/01/2020",3000],
- ["H7014001","TAAC FOOD LIMITED","28/03/2024",15000],
- ["H7026001","SHOWA FRUITS LIMITED","22/01/2020",0],
- ["H7030001","Leader Marine","24/01/2022",43755],
- ["H7019001","電器道","09/04/2025",1342],
- ["H7065001","Kids Instyle Limited","22/01/2020",44],
- ["H7108001","GNA INT'L HK LTD","03/01/2025",103],
- ["H7109001","2 Plus 3 (HK) Industrial Company Limited","24/01/2022",1932],
- ["H6878001","OLENS","09/04/2025",1334490],
- ["H6753001","DENKIAN COMPANY LIMITED","22/01/2020",15000],
- ["H6857001","Beauty Living","04/02/2022",161],
- ["H6811001","digiShare","24/01/2022",59],
- ["H7007001","WINSON ELECTRONIC TECHNOLOGY COMPANY","24/01/2022",11895],
- ["H6760002","PATA NEGRA HOUSE","24/01/2022",25000],
- ["H6879001","HOP CHEONG SEA-PRODUCTS COMPANY LIMITED","22/01/2020",0],
- ["H6997001","B&F","24/01/2022",41],
- ["H6730001","茶里 (香港)有限公司","22/01/2020",0],
- ["H6294001","Proma International Limited","22/01/2020",0],
- ["H6782001","iSmart View","22/01/2020",0],
- ["H7047001","24 Living Store","24/01/2022",254],
- ["H6726001","LifeKonet","22/01/2020",0],
- ["H6995001","蜂鳥 Crazy Bird","22/01/2020",13000],
- ["H6975001","One Health International Limited","24/01/2022",214],
- ["H6755001","INJOY Health Corporate Limited","24/01/2022",0],
- ["H7027001","AbouThai SuperMart","06/01/2022",5250],
- ["H6248001","Big Family Bee","04/02/2022",843],
- ["H6820001","ClicknBuy","24/01/2022",25000],
- ["H6848001","Healthy Life","24/01/2022",10384],
- ["H7040001","Riverfield Life Limited","24/01/2022",284],
- ["H6853001","Good Life (Asia) Health Supplements","22/01/2020",0],
- ["H6948001","MASS WINNING LIMITED","22/01/2020",0],
- ["H6998001","SEVEN SUM TRADING DEVELOPMENT CO LIMITED","22/01/2020",0],
- ["H6987001","RAMBLER MARKETING COMPANY LIMITED","22/01/2020",0],
- ["H7005001","Beaver","22/01/2020",0],
- ["H7015001","Mickey's RANCH FOOD","22/01/2020",0],
- ["H0931001","Cherry","03/01/2025",2001],
- ["H6979001","Triple M (Hong Kong) Trading Limited","22/01/2020",0],
- ["H7035001","POTENTIAL CITY COMPANY LIMITED","22/01/2020",0],
- ["H7050001","HONG KONG TOP ONE BAKERY LIMITED","24/01/2022",15000],
- ["H5626001","DOG DOG COME Wonderland","22/01/2020",0],
- ["S1053002","Wealth","22/01/2020",0],
- ["H6854001","GREATMART DEVELOPMENT LTD","22/01/2020",104],
- ["H6909001","Imon","22/01/2020",0],
- ["S1228001","The Tea & Coffee Room Limited","24/01/2022",15000],
- ["S1256001","A-BEST (HK) Company Limited","22/01/2020",0],
- ["H1021001","Play Hard Hong Kong","24/01/2022",27],
- ["H0539002","stokke","24/01/2022",0],
- ["H6830001","DONG WOO INDUSTRIAL COMPANY LIMITED","22/01/2020",0],
- ["H6856001","EuroCave","22/01/2020",0],
- ["H6947001","Tasty Smile","22/01/2020",0],
- ["H6949001","InSmile Teeth Whitening Spa","22/01/2020",0],
- ["H6990001","Hong Kong Medical Supplies Ltd","24/01/2022",5617],
- ["H6994001","Kai's Gourmet Limited","22/01/2020",11520],
- ["H7022001","fm18plus Limited","06/01/2022",1050],
- ["H5535007","Genki Hong Kong official store","24/02/2022",0],
- ["H7028001","Aristo Educational Press Ltd.","04/02/2022",0],
- ["H7029001","China Cheung Fung International Holdings Limited","22/01/2020",0],
- ["H7031001","好搞笑 JokeZ 'n' PrankZ","22/01/2020",0],
- ["H7039001","miniFab","22/01/2020",0],
- ["H7042001","UBabyBaby LTD","24/02/2022",35],
- ["H7045001","一樂•良方","22/01/2020",365],
- ["H7046001","Dsquare","22/01/2020",0],
- ["H7048001","KANGAROO KING FURNITURE COMPANY LIMITED","22/01/2020",0],
- ["H7049001","Smart Pro","24/01/2022",1561],
- ["H7052001","KEINICHI LIVING STORE","22/01/2020",15000],
- ["H7054001","Fisher Price Official Flap Ship Store","24/01/2022",784],
- ["H7058001","JK Organic","24/01/2022",3342],
- ["H7059001","HAPPY SOURCING LIMITED","24/01/2022",3006],
- ["H7061001","UPGRADE INTERNATIONAL LIMITED","22/01/2020",306],
- ["H7064001","Lenny World Limited","24/01/2022",2542],
- ["H7066001","Wing Hang Medical Supplies Limited","24/01/2022",131],
- ["H7068001","full link-up limited","24/01/2022",13293],
- ["H7072001","More Mall","24/01/2022",0],
- ["H7073001","U-homebest","22/01/2020",10770],
- ["H7081001","平啲啦 Cheap","24/01/2022",162],
- ["H7083001","WHISKY R'US COMPANY LIMITED","24/01/2022",6000],
- ["H7084001","GF Education (HK) Limited","22/01/2020",0],
- ["H7085001","Jmart","24/01/2022",1196],
- ["H7088001","Eagleland","22/01/2020",0],
- ["H7092001","HONEY BB","22/01/2020",0],
- ["H7098001","Marshall Cavendish Education","05/07/2022",549],
- ["H7099001","GOODREAD PUBLISHING LIMITED","22/01/2020",0],
- ["H7100001","STEP-ONE BOOKS LIMITED","24/01/2022",386],
- ["H7101001","WAH FAT HOUSEHOLD WARES LIMITED","24/01/2022",2225],
- ["H7104001","SLOW COOK FAST FOOD COMPANY LIMITED","22/01/2020",0],
- ["H7105001","Exzellenz Verdon Limited","24/01/2022",1074],
- ["H7106001","imiia Hong Kong","22/01/2020",0],
- ["S1151001","PureBamboo Hong Kong Limited","24/01/2022",15000],
- ["H6095001","Noodle & Boo","22/01/2020",0],
- ["H6095002","DREAM OF THE BLUE","22/01/2020",0],
- ["S1183001","Premium Fine Wines","22/01/2020",0],
- ["H6882001","SEAFOOD FLOWERY","22/01/2020",0],
- ["H6295004","Nutricia","03/01/2025",939717],
- ["H5219001","récolte","24/01/2022",437],
- ["H6924001","Linberg's Limited","13/12/2024",939398],
- ["H6778001","FRESH TO GO","22/01/2020",953],
- ["H6754004","Healthy Care","22/01/2020",0],
- ["H6834001","Direct Industries Limited.","24/01/2022",50241],
- ["H6780002","Mustela","22/01/2020",0]];
+const data = [["H5258001", "Tai Pan Ball", "24/01/2022", 26], ["H5950001", "Ocean Three", "14/01/2025", 1136514], ["H6773001", "Amofia", "02/01/2020", 15000], ["H6817002", "BOATAT FOODS MARKET", "23/12/2022", 123], ["H6980001", "SHIKI Wine", "03/01/2025", 71837], ["H6769001", "SUM KIU", "22/12/2023", 10313], ["H0228001", "Hung Fook Tong", "24/01/2022", 0], ["H0727001", "Sugi Bee Garden", "24/01/2022", 15000], ["H0821001", "eFoodWorld", "24/01/2022", 99], ["H6823001", "Giordano Limited", "09/04/2025", 840732], ["S1123001", "HOM", "02/01/2020", 0], ["H0355001", "Chow Tai Fook", "09/04/2025", 1014743], ["H5037001", "Casablanca", "10/10/2024", 1167456], ["H7140001", "BALENO KINGDOM LIMITED", "24/01/2022", 28125], ["H5931001", "TITAN", "06/01/2023", 2343], ["H0808001", "JDHK Shop", "24/01/2022", 1173], ["H5101001", "Truefun", "02/01/2020", 1326], ["H5807003", "Hasbro", "30/01/2023", 94], ["H7051001", "G2000", "20/01/2023", 920], ["H0389001", "3M", "09/04/2025", 412187], ["H1077001", "Wei Ta Wei", "23/12/2024", 1793231], ["S1061001", "Market Of All Nations", "24/01/2022", 50000], ["H1028001", "Mannings", "04/10/2024", 1052553], ["H1061001", "Nissin", "04/02/2025", 256777], ["H1010002", "Mondelez International", "03/01/2025", 104540], ["H1135001", "Quaker", "03/01/2025", 923], ["H1010002", "滴露官方旗艦店", "13/12/2024", 2001550], ["H0551003", "KIMBERLY-CLARK (HONG KONG) LIMITED", "08/11/2024", 533421], ["H1069001", "Pampers Hong Kong Official Store", "03/01/2025", 714068], ["H1066002", "Tempo Hong Kong Official Store", "19/06/2025", 956007], ["H1131001", "Swisse Official Store", "09/04/2025", 262706], ["H1139001", "GSK Hong Kong Official Store", "06/12/2024", 663386], ["H1095001", "Wyeth Nutrition Official Store", "23/11/2024", 107792], ["S6021001", "KINGSWAY BEAUTY", "24/01/2022", 183], ["S6061001", "OrganicMaMa Ltd", "09/04/2025", 36820], ["H0623003", "Mannings Phase 2", "24/01/2022", 173], ["H6588001", "GLORIOUS DIGITAL COMPANY LIMITED", "24/01/2022", 53319], ["H5276001", "ecHome", "24/01/2022", 1586], ["H0696018", "Electrical Appliances Butler", "12/01/2024", 11218], ["H6185002", "French Pharma", "24/01/2022", 1013], ["H0595001", "Smartech", "24/01/2022", 0], ["H5039001", "Brilliant Channel", "24/01/2022", 20], ["H0967001", "F and M", "09/04/2025", 918948], ["H6966001", "LEGO", "06/12/2024", 1600000], ["H5395001", "LingSik King", "25/10/2023", 20139], ["H7115001", "YUAN", "24/02/2022", 25000], ["H6689001", "Sa Sa Hong Kong Flagship Store", "08/02/2024", 50735], ["H0337001", "Sasa", "24/01/2022", 9542], ["H6292001", "SnacksToHome", "29/11/2024", 475071], ["H1086001", "Swipe", "23/11/2024", 267462], ["H1051001", "SCJ", "18/10/2024", 110309], ["H6953001", "Silver Star International Limited", "24/02/2022", 146], ["H1078001", "Wine and Spirit Merchant", "29/11/2024", 188957], ["H1082001", "Carlsberg Official Flagship Store", "29/11/2024", 491398], ["H7213001", "ABC", "09/04/2025", 18629586], ["H0958013", "Pretties", "24/01/2022", 0], ["H6527001", "all about pet", "09/04/2025", 1044068], ["H6242001", "Ocean One", "24/01/2022", 8376], ["H0997002", "Herbs", "24/01/2022", 0], ["S1098001", "wawahuen", "24/01/2022", 304], ["H0956006", "Yummy Bear", "19/01/2023", 1142], ["H5680001", "convene", "24/02/2022", 50000], ["H5789001", "ROPPONGI", "24/01/2022", 16], ["H6349004", "Tefal", "24/01/2022", 0], ["H0873002", "Gilman Outlet", "23/01/2025", 233195], ["H6168001", "藝匠修鞋", "06/01/2023", 1442], ["H6480001", "Yue Fung Department Store", "24/01/2022", 2587], ["H5193001", "AQ Bio", "24/01/2022", 15000], ["H5337002", "Global Brand", "24/01/2022", 817], ["S1203001", "家樂 Happy Home", "13/01/2020", 10970], ["H5535005", "FoodWise", "02/03/2022", 0], ["S1056001", "陽光生活百貨 Sun Grocery HK Limited", "13/01/2020", 0], ["H5573001", "Fine Japan", "23/01/2025", 99451], ["H6780001", "Mustela Flagship store", "09/04/2025", 420627], ["H5685001", "Global Bio", "16/11/2023", 374], ["H6093001", "Meow's Workshop Limited", "13/01/2020", 29], ["H0972006", "ASK Gadgets", "24/01/2022", 245], ["H5156001", "A3", "13/01/2020", 0], ["H0610011", "Homeappliance", "24/02/2022", 1609], ["H5807001", "Unstoppable", "30/01/2023", 21], ["H5980001", "The One Baby", "01/12/2023", 5604], ["S1076001", "Vertex", "24/01/2022", 626], ["H6709001", "Lady Avenue", "24/01/2022", 1062], ["H7056001", "EHS Healthcare", "13/01/2020", 0], ["H1128001", "Mospro", "09/12/2022", 102138], ["H1099001", "Cow and Gate", "13/12/2024", 300863], ["H1022001", "Colgate-Palmolive", "29/11/2024", 3135992], ["H1026001", "Saving International Flagship Store", "09/04/2025", 834295], ["S1103001", "Panda Pig", "22/01/2020", 0], ["H6712001", "Royal Cosmetics", "24/01/2022", 41667], ["H5868001", "Century Mall Outlet", "03/01/2025", 275300], ["H6184001", "OneTwoFit", "01/12/2023", 13815], ["H6777001", "Chill Mall", "24/01/2022", 1566], ["H6842001", "DOUBLE H DEVELOPMENT LIMITED", "04/02/2022", 3112], ["H6807001", "EAST STAR STATIONERY CO. LIMITED", "19/04/2022", 191], ["H6840001", "CY ELECTRONIC TECHNOLOGY LIMITED", "24/01/2022", 25000], ["H6917001", "Wing Tech Limited", "24/01/2022", 25000], ["H6759001", "jpzone", "24/01/2022", 450], ["H7000001", "Market Toyosu HK", "04/02/2022", 15000], ["H7001001", "PACE SUPPLY CHAIN INTERNATIONAL LIMITED", "28/02/2022", 67], ["H7002001", "Janus Trading Company Limited", "24/01/2022", 200], ["H7010001", "Pacific Rich Resources HK Limited", "22/01/2020", 3000], ["H7014001", "TAAC FOOD LIMITED", "28/03/2024", 15000], ["H7026001", "SHOWA FRUITS LIMITED", "22/01/2020", 0], ["H7030001", "Leader Marine", "24/01/2022", 43755], ["H7019001", "電器道", "09/04/2025", 1342], ["H7065001", "Kids Instyle Limited", "22/01/2020", 44], ["H7108001", "GNA INT'L HK LTD", "03/01/2025", 103], ["H7109001", "2 Plus 3 HK Industrial Company Limited", "24/01/2022", 1932], ["H6878001", "OLENS", "09/04/2025", 1334490], ["H6753001", "DENKIAN COMPANY LIMITED", "22/01/2020", 15000], ["H6857001", "Beauty Living", "04/02/2022", 161], ["H6811001", "digiShare", "24/01/2022", 59], ["H7007001", "WINSON ELECTRONIC TECHNOLOGY COMPANY", "24/01/2022", 11895], ["H6760002", "PATA NEGRA HOUSE", "24/01/2022", 25000], ["H6879001", "HOP CHEONG SEA-PRODUCTS COMPANY LIMITED", "22/01/2020", 0], ["H6997001", "B and F", "24/01/2022", 41], ["H6730001", "茶里香港有限公司", "22/01/2020", 0], ["H6294001", "Proma International Limited", "22/01/2020", 0], ["H6782001", "iSmart View", "22/01/2020", 0], ["H7047001", "24 Living Store", "24/01/2022", 254], ["H6726001", "LifeKonet", "22/01/2020", 0], ["H6995001", "蜂鳥 Crazy Bird", "22/01/2020", 13000], ["H6975001", "One Health International Limited", "24/01/2022", 214], ["H6755001", "INJOY Health Corporate Limited", "24/01/2022", 0], ["H7027001", "AbouThai SuperMart", "06/01/2022", 5250], ["H6248001", "Big Family Bee", "04/02/2022", 843], ["H6820001", "ClicknBuy", "24/01/2022", 25000], ["H6848001", "Healthy Life", "24/01/2022", 10384], ["H7040001", "Riverfield Life Limited", "24/01/2022", 284], ["H6853001", "Good Life Asia Health Supplements", "22/01/2020", 0], ["H0931001", "Cherry", "03/01/2025", 2001], ["H7035001", "POTENTIAL CITY COMPANY LIMITED", "22/01/2020", 0], ["H7050001", "HONG KONG TOP ONE BAKERY LIMITED", "24/01/2022", 15000], ["H6854001", "GREATMART DEVELOPMENT LTD", "22/01/2020", 104], ["S1228001", "The Tea and Coffee Room Limited", "24/01/2022", 15000], ["H0539002", "stokke", "24/01/2022", 0], ["H6990001", "Hong Kong Medical Supplies Ltd", "24/01/2022", 5617], ["H6994001", "Kai's Gourmet Limited", "22/01/2020", 11520], ["H7022001", "fm18plus Limited", "06/01/2022", 1050], ["H7028001", "Aristo Educational Press Ltd.", "04/02/2022", 0], ["H7039001", "miniFab", "22/01/2020", 0], ["H7042001", "UBabyBaby LTD", "24/02/2022", 35], ["H7045001", "一樂良方", "22/01/2020", 365], ["H7046001", "Dsquare", "22/01/2020", 0], ["H7048001", "KANGAROO KING FURNITURE COMPANY LIMITED", "22/01/2020", 0], ["H7049001", "Smart Pro", "24/01/2022", 1561], ["H7052001", "KEINICHI LIVING STORE", "22/01/2020", 15000], ["H7054001", "Fisher Price Official Flap Ship Store", "24/01/2022", 784], ["H7058001", "JK Organic", "24/01/2022", 3342], ["H7059001", "HAPPY SOURCING LIMITED", "24/01/2022", 3006], ["H7061001", "UPGRADE INTERNATIONAL LIMITED", "22/01/2020", 306], ["H7064001", "Lenny World Limited", "24/01/2022", 2542], ["H7066001", "Wing Hang Medical Supplies Limited", "24/01/2022", 131], ["H7068001", "full link-up limited", "24/01/2022", 13293], ["H7072001", "More Mall", "24/01/2022", 0], ["H7073001", "U-homebest", "22/01/2020", 10770], ["H7081001", "平啲啦 Cheap", "24/01/2022", 162], ["H7083001", "WHISKY R'US COMPANY LIMITED", "24/01/2022", 6000], ["H7085001", "Jmart", "24/01/2022", 1196], ["H7098001", "Marshall Cavendish Education", "05/07/2022", 549], ["H7100001", "STEP-ONE BOOKS LIMITED", "24/01/2022", 386], ["H7101001", "WAH FAT HOUSEHOLD WARES LIMITED", "24/01/2022", 2225], ["H7105001", "Exzellenz Verdon Limited", "24/01/2022", 1074], ["S1151001", "PureBamboo Hong Kong Limited", "24/01/2022", 15000], ["H6095001", "Noodle and Boo", "22/01/2020", 0], ["S1183001", "Premium Fine Wines", "22/01/2020", 0], ["H6882001", "SEAFOOD FLOWERY", "22/01/2020", 0], ["H6295004", "Nutricia", "03/01/2025", 939717], ["H5219001", "recette", "24/01/2022", 437], ["H6924001", "Linberg's Limited", "13/12/2024", 939398], ["H6778001", "FRESH TO GO", "22/01/2020", 953], ["H6754004", "Healthy Care", "22/01/2020", 0], ["H6834001", "Direct Industries Limited", "24/01/2022", 50241], ["H6780002", "Mustela", "22/01/2020", 0]];
 const PER_PAGE = 50;
 let currentPage = 1;
 let filtered = data.slice();
